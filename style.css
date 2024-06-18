@@ -133,6 +133,14 @@ section {
     color: #ffffff; /* Color de texto en modo oscuro */
     border-color: #ffffff; /* Color del borde en modo oscuro (opcional) */
 }
+.dark-mode .card {
+     /* Estilos para las tarjetas */
+  
+    background-color: #222; /* Fondo oscuro para las tarjetas */
+    color: #fff; /* Color de texto claro en las tarjetas */
+  }
+
+  
 
 /* Estilos para los botones */
 .btn {
@@ -196,6 +204,8 @@ h2.section-title {
 .dark-mode h2.section-title {
     color: #ffffff; /* Color de texto blanco para h2 en modo oscuro */
 }
+
+
 /* CSS para la animación de desplazamiento */
 @keyframes scroll-highlight {
     0% {
@@ -203,7 +213,7 @@ h2.section-title {
         box-shadow: none; /* Sin sombra */
     }
     50% {
-        background-color: #d9ff02; /* Color intermedio */
+        background-color: #9fb331; /* Color intermedio */
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
     }
     100% {
@@ -215,4 +225,39 @@ h2.section-title {
 /* Aplicar la animación a la clase durante el desplazamiento */
 .scroll-animation {
     animation: scroll-highlight 1s ease;
+}
+/* Estilos específicos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px; /* Ajustar tamaño de fuente para móviles */
+    }
+
+    header {
+        height: 60px; /* Reducir altura del encabezado */
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Ajustar tamaño de fuente del título del encabezado */
+    }
+
+    header ul.list-inline li a.nav-link {
+        padding: 5px 10px; /* Reducir espaciado interior de los enlaces del encabezado */
+    }
+
+    .profile-img {
+        max-width: 100%; /* Ajustar imagen de perfil al ancho del contenedor */
+    }
+
+    h2.section-title {
+        font-size: 2rem; /* Ajustar tamaño de fuente de los títulos de sección */
+    }
+
+    .section-text {
+        font-size: 1rem; /* Ajustar tamaño de fuente del texto de sección */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Ajustar tamaño de fuente de los botones */
+        padding: 8px 15px; /* Ajustar espaciado interior de los botones */
+    }
 }
