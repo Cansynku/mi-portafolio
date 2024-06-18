@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Mi Portafolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio Javier Cano</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa728faa74.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light-mode">
+    <!-- Cambia a class="dark-mode" para modo oscuro -->
+    <header class="bg-dark text-white py-4 fixed-top">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="mb-0">Portafolio de Javier Cano 👨‍💻</h1>
+          <nav>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="#about" class="nav-link text-white">Sobre Mí</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#projects" class="nav-link text-white">Proyectos</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#education" class="nav-link text-white">Educación</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#skills" class="nav-link text-white">Skills</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#contact" class="nav-link text-white">Contacto</a>
+              </li>
             </ul>
-        </nav>
+          </nav>
+          <button id="dark-mode-toggle" class="btn btn-sm btn-light ml-2">
+            <i class="fas fa-moon"></i> Cambiar Modo
+          </button>
+        </div>
+      </div>
     </header>
-    <section id="hero">
-        <h2>Hola, soy [Tu Nombre]</h2>
-        <p>Desarrollador Junior apasionado por la tecnología y la programación.</p>
-    </section>
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Una breve descripción sobre ti.</p>
-    </section>
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <div class="project">
-            <h3>Proyecto 1</h3>
-            <p>Descripción del proyecto 1.</p>
-            <a href="https://github.com/tu-usuario/proyecto1">Ver en GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Proyecto 2</h3>
-            <p>Descripción del proyecto 2.</p>
-            <a href="https://github.com/tu-usuario/proyecto2">Ver en GitHub</a>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2024 Mi Nombre. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
 
+    <main class="container my-5">
+      <section id="about" class="mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="section-title mb-4">Javier Cano</h2>
+            <p
+              class="section-text"
+              style="font-size: 1.2rem; line-height: 1.8; color: #6c757d"
+            >
+              🚀 ¡Hola! Soy un
+              <strong style="color: #007bff"
+                >Programador Full Stack Junior</strong
+              >
+              con una pasión ardiente 🔥 por la tecnología y el deporte 🌟🏃‍♂️. Me
+              defino por mi compromiso con la
+              <em>excelencia en cada línea de código que escribo</em> 💻. Soy un
+              jugador de equipo entusiasta, siempre listo para
+              <span style="color: #28a745"
+                >resolver desafíos como un campeón 🏆</span
+              >.
+
+              <br /><br />
+
+              Mi objetivo es ser un motor de innovación en proyectos
+              significativos, combinando mi creatividad 🎨 con mi habilidad para
+              <span style="color: #ffc107"
+                >resolver problemas como un ninja 🥷</span
+              >. ¡Estoy emocionado por construir un futuro digital brillante
+              junto a un equipo apasionado y dinámico! 💡✨
+            </p>
+            <div class="text-center">
+                <a href="https://drive.google.com/file/d/12gM5aPpllTVKifammkc7_WizQovK6f00/view?usp=drive_link" class="btn btn-dark mr-3" target="_blank">
+                    <i class="fas fa-file-download">  CV</i>
+                </a>
+                <a href="https://www.linkedin.com/in/javier-cano-garcía" class="btn btn-primary mr-3" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Cansynku" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+          </div>
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="images/yo.jpg"
+              alt="Foto de perfil"
+              class="img-fluid rounded-circle profile-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="mb-5">
+        <h2 class="section-title text-center mb-5">Proyectos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="project p-4 mb-4">
+                    <h3>Aplicación Web para Club de Padel</h3>
+                    <p>
+                        Aplicación web para la gestión integral de un club de padel, permitiendo reservas de pistas, consulta de tarifas, perfil de profesores, reseñas y un test interactivo de nivel.est interactivo donde los usuarios pueden evaluar su nivel de padel y recibir recomendaciones personalizadas.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://github.com/Cansynku/TFG_clubpadel" class="btn btn-dark" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project p-4 mb-4">
+                    <h3>CRUD para Gestión de Base de Datos</h3>
+                    <p>
+                        Sistema CRUD para administrar la base de datos del club de padel, facilitando la gestión de usuarios, asignación de alumnos por profesores y acceso a la aplicación web.b: Proporciona funcionalidades para acceder y administrar la aplicación web desde una interfaz fácil de usar.
+                    </p>
+                    <div class="text-center">
+                        <a href="https://github.com/Cansynku/CRUD_clubpadel" class="btn btn-dark" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+      <section id="education" class="mb-5 d-none">
+        <h2 class="section-title text-center mb-5">Educación</h2>
+        <p class="text-center">Aquí puedes incluir tu experiencia académica.</p>
+      </section>
+
+      <section id="skills" class="mb-5 d-none">
+        <h2 class="section-title text-center mb-5">Skills</h2>
+        <div class="text-center">
+          <span class="badge badge-primary">HTML/CSS</span>
+          <span class="badge badge-secondary">JavaScript</span>
+          <span class="badge badge-success">React</span>
+          <span class="badge badge-info">Node.js</span>
+          <span class="badge badge-warning">SQL</span>
+        </div>
+      </section>
+
+      <section id="contact" class="mb-5 d-none">
+        <h2 class="section-title text-center mb-5">Contacto</h2>
+        <ul class="list-unstyled text-center contact-info">
+          <li><strong>Nombre:</strong> Javier Cano García</li>
+          <li><strong>Email:</strong> jcanogarcia96@gmail.com</li>
+          <li><strong>Teléfono:</strong> +34 695 721 814</li>
+          <li><strong>Ubicación:</strong> Madrid, Alpedrete</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>&copy; 2024 Javier Cano. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!-- Scripts al final para mejor rendimiento -->
+    <script src="script.js"></script>
+  </body>
+</html>
