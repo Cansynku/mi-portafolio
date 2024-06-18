@@ -136,44 +136,99 @@ section {
 }
 
 /* CSS para la animación de desplazamiento */
+/* CSS (`style.css`) */
+
 @keyframes scroll-highlight {
     0% {
-        background-color: initial; /* Color inicial */
-        box-shadow: none; /* Sin sombra */
+        opacity: 0;
     }
     50% {
-        background-color: #9fb331; /* Color intermedio */
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        opacity: 1;
+        background-image: url('images/code.jpg');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
     100% {
-        background-color: initial; /* Color final (reinicia) */
-        box-shadow: none; /* Sin sombra (reinicia) */
+        opacity: 0;
     }
 }
 
-/* Aplicar la animación a la clase durante el desplazamiento */
-.scroll-animation {
-    animation: scroll-highlight 1s ease;
+.content-section {
+    position: relative;
+    overflow: hidden;
 }
 
+.highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: scroll-highlight 3s ease forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.scroll-animation {
+    animation: scroll-highlight 3s ease-in-out;
+}
+
+
+/* Estilos para dispositivos móviles y tablets */
 /* Estilos para dispositivos móviles y tablets */
 @media (max-width: 991px) {
     body {
         font-size: 16px; /* Ajustar tamaño de fuente base */
     }
 
-    /* Reducir la altura del encabezado y ajustar tamaño de fuente del título */
+    /* Ajustar la altura del encabezado y distribuir elementos en una fila */
     header {
-        height: 60px;
+        height: auto; /* Cambiar a auto para permitir que se expanda según el contenido */
+        padding: 10px 0; /* Reducir el padding para dispositivos móviles */
+    }
+
+    header .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; /* Distribuir elementos a lo largo del espacio disponible */
     }
 
     header h1 {
         font-size: 1.2rem;
+        margin: 0; /* Eliminar margen para mejor ajuste */
+        flex: 1 1 auto; /* Permitir que el título ocupe el espacio disponible */
+        text-align: center; /* Centrar el texto */
     }
 
-    /* Reducir el espaciado interior de los enlaces del encabezado */
+    /* Ajustar los enlaces del encabezado */
+    header nav {
+        flex: 2 1 auto; /* Permitir que los enlaces ocupen más espacio */
+    }
+
+    header ul.list-inline {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten a la línea */
+        justify-content: center; /* Centrar los enlaces horizontalmente */
+        padding: 0;
+        margin: 0;
+    }
+
+    header ul.list-inline li {
+        margin: 5px; /* Espacio entre los enlaces */
+    }
+
     header ul.list-inline li a.nav-link {
         padding: 5px 10px;
+    }
+
+    /* Ajustar el botón de modo oscuro */
+    #dark-mode-toggle {
+        flex: 1 1 auto; /* Permitir que el botón ocupe el espacio disponible */
+        margin-left: auto; /* Alinear el botón a la derecha */
+        margin-top: 0; /* Eliminar margen superior */
     }
 
     /* Ajustar la imagen de perfil para que ocupe todo el ancho disponible */
@@ -201,5 +256,93 @@ section {
     /* Ajustar padding de las secciones */
     section {
         padding: 40px 10px;
+    }
+}
+@keyframes emoji-animation {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-highlight {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        background-image: url('images/code.jpg');
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.content-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: scroll-highlight 5s ease forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.emoji-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    display: none; /* Inicialmente oculto */
+}
+
+.emoji-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.emoji {
+    font-size: 8rem; /* Tamaño del emoticono */
+}
+
+.emoji-text {
+    display: block;
+    margin-top: 1rem; /* Espacio entre el emoticono y el texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+    color: #2ecc71; /* Color verde (puedes cambiarlo según tu preferencia) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
+}
+
+.show-emoji {
+    display: block !important; /* Hacer visible */
+    animation: emoji-animation 5s ease forwards;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(calc(50vw - 50%), calc(50vh - 50%));
     }
 }

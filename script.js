@@ -78,8 +78,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Elimina la clase de animación después de un tiempo para evitar repeticiones
                 setTimeout(() => {
                     targetSection.classList.remove('scroll-animation');
-                }, 1000); // ajusta el tiempo según la duración de tu animación CSS
+                }, 5000); // ajusta el tiempo según la duración de tu animación CSS
             }
         });
+    });
+});
+
+
+// Cuando se hace clic en un enlace del header
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1); // Obtener el ID de la sección
+        const targetSection = document.getElementById(targetId);
+        const emojiContainer = document.getElementById('emoji-container');
+
+        // Mostrar el contenedor del emoticono y el mensaje
+        emojiContainer.classList.add('show-emoji');
+
+        // Ocultar después de 5 segundos
+        setTimeout(function() {
+            emojiContainer.classList.remove('show-emoji');
+        }, 3000);
+
+        // Simular carga de la sección (retraso de 5 segundos)
+        setTimeout(function() {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }, 3000);
     });
 });
