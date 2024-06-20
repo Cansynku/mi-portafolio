@@ -147,8 +147,9 @@ ul.list-inline li a.nav-link:hover {
   }
 
   #dark-mode-toggle {
-    margin-left: 0; /* Sin margen izquierdo */
+    margin-left: 0; /* Sin margen izquierdo en dispositivos móviles */
     margin-top: 10px; /* Espacio superior */
+    margin-right: 10px; /* Margen derecho ajustado para dispositivos móviles */
   }
 }
 
