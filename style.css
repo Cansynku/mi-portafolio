@@ -48,75 +48,110 @@ p {
 .dark-mode h2.section-title {
   color: #ffffff;
 }
+
 /*----------------------------------------
   Estilos del Main
 ----------------------------------------*/
-/* Estilos CSS personalizados */
 .main-content {
-    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
-    margin-bottom: 0.5rem; /* Ajusta el margen inferior según sea necesario */
+  margin-top: 50px;
+  margin-bottom: 0.5rem;
 }
-
 
 /*----------------------------------------
   Estilos del Header
 ----------------------------------------*/
+/* Estilos del Header */
 header {
-    padding: 1rem 0; /* Incrementado el relleno vertical */
-    height: 100px; /* Aumentada la altura del header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease-in-out, height 0.3s ease;
-    position: relative;
+  padding: 1rem 0;
+  height: auto; /* Altura automática para ajustarse al contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, height 0.3s ease;
+  position: relative;
+  background-color: #343a40; /* Color de fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  text-align: center; /* Alineación central del contenido */
+}
+
+h1.mb-0 {
+  font-size: 2.5rem; /* Tamaño de fuente grande para dispositivos de escritorio */
+  text-align: center; /* Centrado del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  margin-left: 20px; /* Aumenta el margen izquierdo */
+}
+
+@media (max-width: 768px) {
+  h1.mb-0 {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    margin-left: 10px; /* Ajuste de margen izquierdo para dispositivos móviles */
+  }
 }
 
 
-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
-
+/* Estilos para el menú de navegación */
 header nav {
-  margin-left: auto;
+  margin-top: 10px; /* Margen superior */
 }
 
-header ul.list-inline {
-  margin: 0;
+ul.list-inline {
   padding: 0;
+  margin: 0;
+  list-style-type: none; /* Elimina los puntos de la lista */
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center; /* Centrado horizontal */
 }
 
-header ul.list-inline li {
+ul.list-inline li {
   margin-right: 15px;
 }
 
-header ul.list-inline li:last-child {
+ul.list-inline li:last-child {
   margin-right: 0;
 }
 
-header ul.list-inline li a.nav-link {
+ul.list-inline li a.nav-link {
   color: #ffffff;
   text-decoration: none;
   padding: 10px 15px;
   transition: color 0.3s ease-in-out;
 }
 
-header ul.list-inline li a.nav-link:hover {
+ul.list-inline li a.nav-link:hover {
   color: #ffc107;
 }
 
-header.bg-dark h1 {
-    margin-left: 300px; /* Ajusta el valor del margen izquierdo según tu preferencia */
+/* Estilos para el botón de modo oscuro */
+#dark-mode-toggle {
+  font-size: 0.9rem; /* Tamaño de fuente pequeño */
+  padding: 8px 15px; /* Espaciado dentro del botón */
+  margin-left: 10px; /* Margen izquierdo original */
+  margin-right: 20px; /* Nuevo margen derecho */
 }
 
-#dark-mode-toggle {
-  font-size: 0.9rem;
-  padding: 8px 15px;
-  margin-right: 100px;
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móviles */
+
+  header h1 {
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+  }
+
+  ul.list-inline {
+    flex-direction: column; /* Cambia a disposición en columna */
+    align-items: center; /* Centrado vertical */
+  }
+
+  ul.list-inline li {
+    margin-bottom: 10px; /* Espacio entre elementos */
+    margin-right: 0;
+  }
+
+  #dark-mode-toggle {
+    margin-left: 0; /* Sin margen izquierdo */
+    margin-top: 10px; /* Espacio superior */
+  }
 }
+
 
 /*----------------------------------------
   Estilos de Secciones Generales
@@ -138,39 +173,33 @@ h2.section-title {
 /*----------------------------------------
   Sección de Educación
 ----------------------------------------*/
-/* Estilos para las tarjetas personalizadas */
 .education-card {
-    border: none;
-    padding: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    height: 53%;
-    border-radius: 10px;
+  border: none;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  height: 53%;
+  border-radius: 10px;
 }
 
-/* Estilos para las tarjetas en modo claro */
 .light-mode .education-card {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #343a40; /* Texto oscuro */
+  background-color: #ffffff;
+  color: #343a40;
 }
 
-/* Estilos para las tarjetas en modo oscuro */
 .dark-mode .education-card {
-    background-color: #343a40; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
+  background-color: #343a40;
+  color: #ffffff;
 }
 
-/* Estilos al pasar el mouse en modo claro */
 .light-mode .education-card:hover {
-    transform: translateY(-10px); /* Efecto de levantamiento */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos al pasar el mouse en modo oscuro */
 .dark-mode .education-card:hover {
-    transform: translateY(-10px); /* Efecto de levantamiento */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Sombra suave */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
-
 
 /*----------------------------------------
   Sección de Cursos MOOC
@@ -237,73 +266,121 @@ h2.section-title {
   background-color: #343a40;
   color: #ffffff;
 }
-/* Estilos para las tarjetas de proyectos */
-.project-card {
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-/* Fondo claro para las tarjetas */
 .light-mode .project-card {
-  background-color: #f8f9fa; /* Fondo claro */
-  color: #343a40; /* Texto oscuro */
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
-/* Fondo oscuro para las tarjetas */
 .dark-mode .project-card {
-  background-color: #343a40; /* Fondo oscuro */
-  color: #ffffff; /* Texto claro */
-}
-/* Estilos para los botones personalizados */
-.github-btn {
-    font-size: 0.9rem;
-    padding: 8px 20px;
-    border: 2px solid; /* Borde del botón */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #343a40;
+  color: #ffffff;
 }
 
-/* Estilos para el botón en modo claro */
 .light-mode .github-btn {
-    background-color: transparent; /* Fondo transparente */
-    color: #343a40; /* Texto oscuro */
-    border-color: #343a40; /* Borde oscuro */
+  background-color: transparent;
+  color: #343a40;
+  border-color: #343a40;
 }
 
-/* Estilos para el botón en modo oscuro */
 .dark-mode .github-btn {
-    background-color: transparent; /* Fondo transparente */
-    color: #ffffff; /* Texto claro */
-    border-color: #ffffff; /* Borde claro */
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-/* Estilo para el botón al pasar el mouse */
 .github-btn:hover {
-    background-color: #343a40; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
+  background-color: #343a40;
+  color: #ffffff;
 }
-/* Estilo para el botón al pasar el mouse en modo oscuro */
+
 .dark-mode .github-btn:hover {
-    background-color: #ffffff; /* Fondo claro */
-    color: #343a40; /* Texto oscuro */
-    border-color: #ffffff; /* Borde claro */
+  background-color: #ffffff;
+  color: #343a40;
+  border-color: #ffffff;
 }
+
 @media (max-width: 767px) {
-  .project {
-    padding: 20px;
+  section {
+    padding: 40px 10px;
+    margin-top: 80px;
   }
 }
+
 /*----------------------------------------
-  Sección de Skills
+  Estilos de Imagen de Perfil
 ----------------------------------------*/
+.profile-img {
+  max-width: 300px;
+  height: auto;
+}
 
+/*----------------------------------------
+  Estilos de Footer
+----------------------------------------*/
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
 
+.custom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.footer p {
+  margin: 10px 0;
+}
 
+.footer i {
+  color: #dc3545;
+}
+
+/*----------------------------------------
+  Estilos de scrolltoTOP
+----------------------------------------*/
+.ir-arriba {
+  display: none;
+  padding: 15px;
+  background-color: #024959;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.ir-arriba:hover {
+  background-color: #037e8c;
+  transform: scale(1.1);
+}
+
+.ir-arriba::before {
+  content: "\1F680";
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+  .ir-arriba {
+    font-size: 16px;
+  }
+}
 
 /*----------------------------------------
   Animaciones
@@ -345,158 +422,57 @@ h2.section-title {
   opacity: 0;
   pointer-events: none;
 }
+
 /*----------------------------------------
   Contenedor de Emoji
 ----------------------------------------*/
 .emoji-container {
-    position: fixed;
-    top: 50%; /* Centra verticalmente */
-    left: 80px; /* Ajusta la posición a la derecha */
-    transform: translateY(-50%); /* Centra verticalmente */
-    z-index: 999;
-    text-align: center;
-    display: none;
+  position: fixed;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 999;
+  text-align: center;
+  display: none;
 }
 
 .emoji-wrapper {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .emoji {
-    font-size: 10rem; /* Ajusta el tamaño del emoji */
+  font-size: 10rem;
 }
 
 .emoji-text {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    font-family: "Courier New", Courier, monospace;
-    color: #2ecc71;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #2ecc71;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .show-emoji {
-    display: block !important;
-    animation: emoji-animation 5s ease forwards;
+  display: block !important;
+  animation: emoji-animation 5s ease forwards;
 }
 
 @keyframes emoji-animation {
-    0% {
-        transform: scale(0.1);
-        opacity: 0;
-    }
-
-    50% {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-
-/*----------------------------------------
-  Ajustes para Pantallas Pequeñas
-----------------------------------------*/
-@media (max-width: 768px) {
-  header {
-    height: auto;
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
   }
 
-  header h1 {
-    font-size: 1.2rem;
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
   }
 
-  header ul.list-inline {
-    flex-direction: column;
-    align-items: flex-start;
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-
-  header ul.list-inline li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  section {
-    padding: 40px 10px;
-    margin-top: 80px;
-  }
-}
-
-/*----------------------------------------
-  Estilos de Imagen de Perfil
-----------------------------------------*/
-.profile-img {
-  max-width: 300px;
-  height: auto;
-}
-/*----------------------------------------
-  Estilos de Footer
-----------------------------------------*/
-.footer {
-    background-color: #343a40; /* Fondo oscuro */
-    color: #ffffff; /* Texto claro */
-    padding: 40px 0;
-    text-align: center;
-}
-
-.custom-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.footer p {
-    margin: 10px 0;
-}
-
-.footer i {
-    color: #dc3545; /* Color de los íconos (corazón rojo) */
-}
-/*----------------------------------------
-  Estilos de scrolltoTOP
-----------------------------------------*/
-.ir-arriba {
-    display: none;
-    padding: 15px;
-    background-color: #024959;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-}
-
-.ir-arriba:hover {
-    background-color: #037E8C;
-    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
-}
-
-.ir-arriba::before {
-    content: "\1F680"; /* Código Unicode del emoticón cohete */
-    display: block;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-@media (max-width: 576px) {
-    .ir-arriba {
-        font-size: 16px;
-    }
 }
 
