@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/fa728faa74.js" crossorigin="anonymous"></script>
+
     <title>Mi Portafolio Javier Cano</title>
     <link
       rel="stylesheet"
@@ -16,12 +18,12 @@
   </head>
   <body class="light-mode">
     <!-- Cambia a class="dark-mode" para modo oscuro -->
-    <header class="bg-dark text-white py-4">
-      <div class="container">
+    <header class="bg-dark text-white py-8">
+      
           <div class="d-flex justify-content-between align-items-center">
-              <h1 class="mb-0">Portafolio de Javier Cano 👨‍💻</h1>
+              <h1 class="mb-0">Bienvenid@ a mi portfolio</h1>
               <nav>
-                  <ul class="list-inline mb-0">
+                  <ul class="list-inline mb-">
                       <li class="list-inline-item">
                           <a href="#about" class="nav-link text-white">Sobre Mí</a>
                       </li>
@@ -32,7 +34,7 @@
                           <a href="#education" class="nav-link text-white">Educación</a>
                       </li>
                       <li class="list-inline-item">
-                          <a href="#skills" class="nav-link text-white">Skills</a>
+                          <a href="#skills" class="nav-link text-white">Habilidades</a>
                       </li>
                       <li class="list-inline-item">
                           <a href="#contact" class="nav-link text-white">Contacto</a>
@@ -43,18 +45,18 @@
                   <i class="fas fa-moon"></i> Cambiar Modo
               </button>
           </div>
-      </div>
+          <div id="emoji-container" class="emoji-container">
+            <div class="emoji-wrapper">
+                <span class="emoji">👨‍💻</span>
+            </div>
+            <span class="emoji-text">Coding...</span>
+        </div>
   </header>
-<div id="emoji-container" class="emoji-container">
-    <div class="emoji-wrapper">
-        <span class="emoji">👨‍💻</span>
-    </div>
-    <span class="emoji-text">COMPILANDO..</span>
-</div>
 
-    <main class="container my-5">
+
+<main class="container main-content"> 
       <section id="about" class="mb-5">
-        <div class="container">
+        <div class="custom-container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-content">
@@ -85,32 +87,30 @@
             </div>
         </div>
     </section>
-    
-
-      <section id="projects" class="mb-5">
+    <section id="projects" class="mb-5">
         <h2 class="section-title text-center mb-5">Proyectos</h2>
         <div class="row">
             <div class="col-md-6">
-                <div class="project card bg-light p-4 mb-4">
+                <div class="project-card card p-4 mb-4">
                     <h3>Aplicación Web para Club de Padel</h3>
                     <p>
                         Aplicación web para la gestión integral de un club de padel, permitiendo reservas de pistas, consulta de tarifas, perfil de profesores, reseñas y un test interactivo de nivel.
                     </p>
                     <div class="text-center mt-4">
-                        <a href="https://github.com/Cansynku/TFG_clubpadel" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/Cansynku/TFG_clubpadel" class="github-btn btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> Ver en GitHub
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="project card bg-light p-4 mb-4">
+                <div class="project-card card p-4 mb-4">
                     <h3>CRUD para Gestión de Base de Datos</h3>
                     <p>
                         Sistema CRUD para administrar la base de datos del club de padel, facilitando la gestión de usuarios, asignación de alumnos por profesores y acceso a la aplicación web.
                     </p>
                     <div class="text-center mt-4">
-                        <a href="https://github.com/Cansynku/CRUD_clubpadel" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/Cansynku/CRUD_clubpadel" class="github-btn btn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> Ver en GitHub
                         </a>
                     </div>
@@ -118,9 +118,8 @@
             </div>
         </div>
     </section>
-    
     <section id="education" class="mb-5">
-      <div class="container">
+      <div class="custom-container">
           <h2 class="section-title text-center mb-5">Educación</h2>
         
           <div class="row mb-5">
@@ -128,8 +127,8 @@
               <div class="col-lg-6">
                   <div class="card education-card shadow-sm">
                       <div class="card-body">
-                          <h3 class="card-title">DAM - Título en Grado Superior de Desarrollo de Aplicaciones Multiplataforma en Modalidad Dual</h3>
-                          <p class="card-text mb-3">Universidad Francisco de Vitoria, 2023 - 2024</p>
+                          <h3 class="card-title">Desarrollo de Aplicaciones Multiplataforma - DAM</h3>
+                          <p class="card-text mb-3">Universidad Francisco de Vitoria</p> 
                           <div class="text-center">
                               <img src="images/nota.png" alt="Nota media DAM" class="img-fluid rounded-circle" style="width: 120px;">
                           </div>
@@ -142,7 +141,7 @@
                   <div class="card education-card shadow-sm">
                       <div class="card-body">
                           <h3 class="card-title">Grado en Comercio Internacional</h3>
-                          <p class="card-text mb-3">Universidad Complutense de Madrid, 2015 - 2018</p>
+                          <p class="card-text mb-3">Universidad Complutense de Madrid</p>
                       </div>
                   </div>
               </div>
@@ -204,60 +203,68 @@
       </div>
   </section>
   <section id="skills" class="mb-5">
-    <div class="container">
+    <div class="custom-container">
         <h2 class="section-title text-center mb-4">Habilidades</h2>
         
-        <div class="row justify-content-center">
+        <div class="row skills-row">
             <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
+                <div class="skills-item mb-4">
                     <h4 class="mb-3">Desarrollo Frontend</h4>
-                    <span class="badge badge-primary mr-3"><i class="fab fa-html5 fa-3x"></i></span>
-                    <span class="badge badge-secondary mr-3"><i class="fab fa-css3-alt fa-3x"></i></span>
-                    <span class="badge badge-success mr-3"><i class="fab fa-js fa-3x"></i></span>
-                    <span class="badge badge-info"><i class="fab fa-react fa-3x"></i></span>
+                    <div class="badge-group">
+                        <span class="badge badge-primary"><i class="fab fa-html5 fa-3x"></i></span>
+                        <span class="badge badge-secondary"><i class="fab fa-css3-alt fa-3x"></i></span>
+                        <span class="badge badge-success"><i class="fab fa-js fa-3x"></i></span>
+                        <span class="badge badge-info"><i class="fab fa-react fa-3x"></i></span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
-                    <h4 class="mb-3">Desarrollo Backend</h4>
-                    <span class="badge badge-info mr-3"><i class="fab fa-node-js fa-3x"></i></span>
-                    <span class="badge badge-warning"><i class="fab fa-java fa-3x"></i></span>
-                </div>
-            </div>
-        </div>
-      
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
+                
+                <div class="skills-item mb-4">
                     <h4 class="mb-3">Herramientas y Tecnologías</h4>
-                    <span class="badge badge-light mr-3"><i class="fab fa-github fa-3x"></i></span>
-                    <span class="badge badge-dark mr-3"><i class="fas fa-code fa-3x"></i></span>
-                    <span class="badge badge-warning"><i class="fas fa-file-code fa-3x"></i></span>
+                    <div class="badge-group">
+                        <span class="badge badge-light"><i class="fab fa-github fa-3x"></i></span>
+                        <span class="badge badge-dark"><i class="fas fa-code fa-3x"></i></span>
+                        <span class="badge badge-warning"><i class="fas fa-file-code fa-3x"></i></span>
+                    </div>
                 </div>
             </div>
+            
             <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
-                    <h4 class="mb-3">Otras Habilidades</h4>
-                    <span class="badge badge-primary mr-3"><i class="fas fa-users fa-3x"></i></span>
-                    <span class="badge badge-success"><i class="fas fa-lightbulb fa-3x"></i></span>
+                <div class="skills-item mb-4">
+                    <h4 class="mb-3">Desarrollo Backend</h4>
+                    <div class="badge-group">
+                        <span class="badge badge-info"><i class="fab fa-node-js fa-3x"></i></span>
+                        <span class="badge badge-warning"><i class="fab fa-java fa-3x"></i></span>
+                    </div>
+                </div>
+                
+                <div class="skills-item mb-4">
+                    <h4 class="mb-3">Idiomas</h4>
+                    <div class="badge-group">
+                        <span class="badge badge-primary"><i class="fas fa-language fa-3x"></i> Español (Nativo)</span>
+                        <span class="badge badge-secondary"><i class="fas fa-language fa-3x"></i> Inglés (Avanzado)</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Nuevas Habilidades -->
-        <div class="row justify-content-center mt-4">
+        <div class="row skills-row mt-4">
             <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
+                <div class="skills-item mb-4">
                     <h4 class="mb-3">Base de Datos</h4>
-                    <span class="badge badge-info mr-3"><i class="fas fa-database fa-3x"></i> SQL</span>
-                    <span class="badge badge-success"><i class="fas fa-database fa-3x"></i> MongoDB</span>
+                    <div class="badge-group">
+                        <span class="badge badge-info"><i class="fas fa-database fa-3x"></i> SQL</span>
+                        <span class="badge badge-success"><i class="fas fa-database fa-3x"></i> MongoDB</span>
+                    </div>
                 </div>
             </div>
+            
             <div class="col-md-6">
-                <div class="skills-item text-center mb-4">
+                <div class="skills-item mb-4">
                     <h4 class="mb-3">Habilidades Adicionales</h4>
-                    <span class="badge badge-secondary mr-3"><i class="fas fa-handshake fa-3x"></i> Trabajo en Equipo</span>
-                    <span class="badge badge-warning"><i class="fas fa-cogs fa-3x"></i> Resolución de Problemas</span>
+                    <div class="badge-group">
+                        <span class="badge badge-secondary"><i class="fas fa-handshake fa-3x"></i> Trabajo en Equipo</span>
+                        <span class="badge badge-warning"><i class="fas fa-cogs fa-3x"></i> Resolución de Problemas</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,17 +301,20 @@
           </div>
         </div>
       </section>
-      
-      
+      <span class="ir-arriba icon-arrow-up2"></span>
     </main>
-
-    <footer class="bg-dark text-white py-4">
-      <div class="container text-center">
-        <p>&copy; 2024 Javier Cano. Todos los derechos reservados.</p>
-      </div>
-    </footer>
     
+    <footer class="footer">
+        <div class="custom-container">
+            <p>&copy; 2024 Javier Cano. Todos los derechos reservados.</p>
+            <p>¡Transformando ideas en código!</p>
+            <p>Desarrollado con <i class="fas fa-heart"></i> y <i class="fas fa-code"></i></p>
+        </div>
+    </footer>
+   
     <!-- Scripts al final para mejor rendimiento -->
     <script src="script.js"></script>
+    
+    
   </body>
 </html>

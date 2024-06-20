@@ -108,3 +108,21 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }, 3000);
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const irArriba = document.querySelector('.ir-arriba');
+
+    irArriba.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            irArriba.style.display = 'block';
+        } else {
+            irArriba.style.display = 'none';
+        }
+    });
+});

@@ -1,378 +1,502 @@
-
- /*AQUÍ EMPIEZA EL CSS */
- /* Estilos generales del cuerpo del documento */
+/*----------------------------------------
+  Estilos Generales del Documento
+----------------------------------------*/
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa; /* Color de fondo general */
-    color: #343a40; /* Color de texto principal */
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilos para el modo claro */
-.light-mode {
-    background-color: #f8f9fa;
-    color: #343a40;
-}
-
-/* Estilos para el modo oscuro */
-.dark-mode {
-    background-color: #212529;
-    color: #ffffff; /* Color de texto principal en modo oscuro */
-}
-/* Estilos para los enlaces */
 a {
-    color: #007bff; /* Color de enlace por defecto */
-    text-decoration: none; /* Quita subrayado */
-    transition: color 0.3s ease; /* Transición suave del color */
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3; /* Color de enlace al pasar el mouse */
+  color: #0056b3;
 }
 
-/* Estilos para los párrafos */
 p {
-    font-size: 1.1rem; /* Tamaño de fuente */
-    color: inherit; /* Hereda el color de texto del padre */
-    line-height: 1.8; /* Altura de línea */
-    text-align: justify; /* Alineación justificada */
+  font-size: 1.1rem;
+  color: inherit;
+  line-height: 1.8;
+  text-align: justify;
 }
 
-/* Estilos para los títulos de sección */
-h2.section-title {
-    font-size: 2.5rem; /* Tamaño de fuente */
-    margin-bottom: 30px; /* Margen inferior */
-    color: #ffffff; /* Color de texto en modo oscuro */
-    text-align: center; /* Alineación centrada */
+/*----------------------------------------
+  Modo Claro y Modo Oscuro
+----------------------------------------*/
+.light-mode {
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
-/* Estilos para los títulos de sección en modo claro */
+.dark-mode {
+  background-color: #212529;
+  color: #ffffff;
+}
+
 .light-mode h2.section-title {
-    color: #000000; /* Color de texto negro para h2 en modo claro */
+  color: #000000;
 }
 
-/* Estilos para los títulos de sección en modo oscuro */
 .dark-mode h2.section-title {
-    color: #ffffff; /* Color de texto blanco para h2 en modo oscuro */
+  color: #ffffff;
 }
-/* Estilo general del header */
+/*----------------------------------------
+  Estilos del Main
+----------------------------------------*/
+/* Estilos CSS personalizados */
+.main-content {
+    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 0.5rem; /* Ajusta el margen inferior según sea necesario */
+}
+
+
+/*----------------------------------------
+  Estilos del Header
+----------------------------------------*/
 header {
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 1rem 0; /* Incrementado el relleno vertical */
+    height: 100px; /* Aumentada la altura del header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease-in-out, height 0.3s ease; /* Transiciones suaves */
-    position: relative; /* Cambiar a position: relative */
-    height: 80px; /* Altura inicial del encabezado */
+    transition: background-color 0.3s ease-in-out, height 0.3s ease;
+    position: relative;
 }
 
+
 header h1 {
-    font-size: 1.5rem; /* Tamaño de fuente del título */
-    margin-bottom: 0; /* Eliminar margen inferior del título */
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 header nav {
-    margin-left: auto; /* Mover navegación a la derecha */
+  margin-left: auto;
 }
 
 header ul.list-inline {
-    margin: 0; /* Eliminar margen de la lista */
-    padding: 0; /* Eliminar relleno de la lista */
-    display: flex;
-    justify-content: flex-end; /* Alinear a la derecha */
-    align-items: center; /* Alinear verticalmente */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 header ul.list-inline li {
-    margin-right: 15px; /* Espaciado entre elementos de la lista */
+  margin-right: 15px;
 }
 
 header ul.list-inline li:last-child {
-    margin-right: 0; /* Sin margen derecho en el último elemento */
+  margin-right: 0;
 }
 
 header ul.list-inline li a.nav-link {
-    color: #ffffff; /* Color de texto para enlaces en el encabezado */
-    text-decoration: none; /* Quitar subrayado */
-    padding: 10px 15px; /* Espaciado interior */
-    transition: color 0.3s ease-in-out; /* Transición suave del color de texto */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
 }
 
 header ul.list-inline li a.nav-link:hover {
-    color: #ffc107; /* Color de texto al pasar el mouse sobre los enlaces */
+  color: #ffc107;
 }
 
-/* Botón de modo oscuro */
+header.bg-dark h1 {
+    margin-left: 300px; /* Ajusta el valor del margen izquierdo según tu preferencia */
+}
+
 #dark-mode-toggle {
-    font-size: 0.9rem; /* Tamaño de fuente del botón */
-    padding: 8px 15px; /* Espaciado interior del botón */
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  margin-right: 100px;
 }
 
-
-
-/* Estilos para la sección de educación */
-
-
-.section-title {
-    font-size: 3rem; /* Tamaño de fuente */
-    color: #343a40; /* Color de texto */
-    margin-bottom: 40px; /* Espacio inferior */
+/*----------------------------------------
+  Estilos de Secciones Generales
+----------------------------------------*/
+section {
+  padding: 60px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-top: 5px;
 }
 
+h2.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*----------------------------------------
+  Sección de Educación
+----------------------------------------*/
+/* Estilos para las tarjetas personalizadas */
 .education-card {
-    border: none; /* Sin borde */
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 30px; /* Espaciado interno */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
-    height: 100%;
+    border: none;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    height: 53%;
+    border-radius: 10px;
 }
 
-.education-card:hover {
-    transform: translateY(-10px); /* Efecto de levantamiento al pasar el mouse */
+/* Estilos para las tarjetas en modo claro */
+.light-mode .education-card {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #343a40; /* Texto oscuro */
+}
+
+/* Estilos para las tarjetas en modo oscuro */
+.dark-mode .education-card {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+}
+
+/* Estilos al pasar el mouse en modo claro */
+.light-mode .education-card:hover {
+    transform: translateY(-10px); /* Efecto de levantamiento */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.card-body {
-    padding: 0; /* Ajuste de relleno */
+/* Estilos al pasar el mouse en modo oscuro */
+.dark-mode .education-card:hover {
+    transform: translateY(-10px); /* Efecto de levantamiento */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Sombra suave */
 }
 
-.card-title {
-    font-size: 1.5rem; /* Tamaño de fuente */
-    font-weight: bold; /* Negrita */
-    color: #343a40; /* Color de texto */
-    margin-bottom: 10px; /* Espacio inferior */
-}
 
-.card-text {
-    font-size: 1rem; /* Tamaño de fuente para el texto dentro de la tarjeta */
-    color: #6c757d; /* Color de texto secundario */
-}
-
-.text-center {
-    text-align: center; /* Alineación centrada */
-}
-
-.img-fluid {
-    max-width: 100%; /* Ancho máximo para imágenes fluidas */
-    height: auto; /* Altura automática */
-    border-radius: 50%; /* Borde redondeado para imágenes circulares */
-}
-
-/* Estilos para los cursos MOOC */
+/*----------------------------------------
+  Sección de Cursos MOOC
+----------------------------------------*/
 .course-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background-color: #343a40;
-    padding: 20px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #343a40;
+  padding: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-card:hover {
-    transform: translateY(-10px); /* Efecto de levantamiento al pasar el mouse */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .course-content {
-    text-align: center;
+  text-align: center;
 }
 
 .course-title {
-    font-size: 0.9rem; /* Tamaño de fuente */
-    color: #ffffff; /* Color de texto */
-    margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin: 0;
 }
 
-
-
-/* Estilos para las secciones */
-section {
-    padding: 60px 20px; /* Espaciado interno */
-    border-radius: 10px; /* Borde redondeado */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 40px; /* Margen inferior */
-    margin-top: 100px; /* Margen superior */
-}
-
-/* Estilos adicionales para la sección de proyectos */
-
-/* Estilos para las tarjetas de proyectos en modo claro */
-.project.card {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #343a40; /* Texto oscuro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-}
-
-
-
+/*----------------------------------------
+  Sección de Proyectos
+----------------------------------------*/
 .project {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .project h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .project p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .project .btn {
-    font-size: 0.9rem;
-    padding: 8px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project .btn:hover {
-    background-color: #343a40; /* Color de fondo al pasar el mouse */
-    color: #ffffff; /* Color de texto al pasar el mouse */
+  background-color: #343a40;
+  color: #ffffff;
+}
+/* Estilos para las tarjetas de proyectos */
+.project-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Fondo claro para las tarjetas */
+.light-mode .project-card {
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #343a40; /* Texto oscuro */
+}
 
+/* Fondo oscuro para las tarjetas */
+.dark-mode .project-card {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+}
+/* Estilos para los botones personalizados */
+.github-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border: 2px solid; /* Borde del botón */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el botón en modo claro */
+.light-mode .github-btn {
+    background-color: transparent; /* Fondo transparente */
+    color: #343a40; /* Texto oscuro */
+    border-color: #343a40; /* Borde oscuro */
+}
+
+/* Estilos para el botón en modo oscuro */
+.dark-mode .github-btn {
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* Texto claro */
+    border-color: #ffffff; /* Borde claro */
+}
+
+/* Estilo para el botón al pasar el mouse */
+.github-btn:hover {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+}
+/* Estilo para el botón al pasar el mouse en modo oscuro */
+.dark-mode .github-btn:hover {
+    background-color: #ffffff; /* Fondo claro */
+    color: #343a40; /* Texto oscuro */
+    border-color: #ffffff; /* Borde claro */
+}
 @media (max-width: 767px) {
-    .project {
-        padding: 20px;
-    }
+  .project {
+    padding: 20px;
+  }
+}
+/*----------------------------------------
+  Sección de Skills
+----------------------------------------*/
+
+
+
+
+
+
+/*----------------------------------------
+  Animaciones
+----------------------------------------*/
+@keyframes scroll-highlight {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    background-image: url("images/code.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-/* CSS para la animación de desplazamiento */
-@keyframes scroll-highlight {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        background-image: url('images/code.jpg');
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        opacity: 0;
-    }
+.scroll-animation {
+  animation: scroll-highlight 3s ease-in-out;
 }
 
 .content-section {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .highlight-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: scroll-highlight 3s ease forwards;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: scroll-highlight 3s ease forwards;
+  opacity: 0;
+  pointer-events: none;
 }
-
-
-
-/* Estilos para el contenedor de emoji */
+/*----------------------------------------
+  Contenedor de Emoji
+----------------------------------------*/
 .emoji-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* Centra verticalmente */
+    left: 80px; /* Ajusta la posición a la derecha */
+    transform: translateY(-50%); /* Centra verticalmente */
     z-index: 999;
     text-align: center;
-    display: none; /* Inicialmente oculto */
+    display: none;
 }
 
-/* Estilos para el wrapper del emoji */
 .emoji-wrapper {
     display: inline-block;
     position: relative;
 }
 
-/* Estilos para el emoji */
 .emoji {
-    font-size: 8rem; /* Tamaño del emoticono */
+    font-size: 10rem; /* Ajusta el tamaño del emoji */
 }
 
-/* Estilos para el texto del emoji */
 .emoji-text {
     display: block;
-    margin-top: 1rem; /* Espacio entre el emoticono y el texto */
-    font-size: 1.5rem; /* Tamaño del texto */
-    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
-    color: #2ecc71; /* Color verde (puedes cambiarlo según tu preferencia) */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: "Courier New", Courier, monospace;
+    color: #2ecc71;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* Animación para mostrar el emoji */
 .show-emoji {
-    display: block !important; /* Hacer visible */
+    display: block !important;
     animation: emoji-animation 5s ease forwards;
 }
 
-/* Keyframes para la animación del emoji */
 @keyframes emoji-animation {
     0% {
         transform: scale(0.1);
         opacity: 0;
     }
+
     50% {
         transform: scale(1.5);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
-/* Animación de resaltado al desplazar */
-.scroll-animation {
-    animation: scroll-highlight 3s ease-in-out;
-}
- /* Ajustar la imagen de perfil para que ocupe todo el ancho disponible */
- .profile-img {
-    max-width: 300px; /* Ejemplo: establece el ancho máximo deseado */
-    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
-}
-/* Ajustes para pantallas pequeñas */
+
+
+/*----------------------------------------
+  Ajustes para Pantallas Pequeñas
+----------------------------------------*/
 @media (max-width: 768px) {
-    header {
-        height: auto; /* Ajustar altura del encabezado para adaptarse al contenido */
-    }
+  header {
+    height: auto;
+  }
 
-    header h1 {
-        font-size: 1.2rem; /* Reducir tamaño de fuente del título principal */
-    }
+  header h1 {
+    font-size: 1.2rem;
+  }
 
-    header ul.list-inline {
-        flex-direction: column; /* Cambiar a disposición de columna para los enlaces */
-        align-items: flex-start; /* Alinear a la izquierda */
-    }
+  header ul.list-inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    header ul.list-inline li {
-        margin-right: 0; /* Sin margen derecho entre elementos de la lista */
-        margin-bottom: 10px; /* Espaciado inferior entre elementos */
+  header ul.list-inline li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 40px 10px;
+    margin-top: 80px;
+  }
+}
+
+/*----------------------------------------
+  Estilos de Imagen de Perfil
+----------------------------------------*/
+.profile-img {
+  max-width: 300px;
+  height: auto;
+}
+/*----------------------------------------
+  Estilos de Footer
+----------------------------------------*/
+.footer {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer i {
+    color: #dc3545; /* Color de los íconos (corazón rojo) */
+}
+/*----------------------------------------
+  Estilos de scrolltoTOP
+----------------------------------------*/
+.ir-arriba {
+    display: none;
+    padding: 15px;
+    background-color: #024959;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.ir-arriba:hover {
+    background-color: #037E8C;
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.ir-arriba::before {
+    content: "\1F680"; /* Código Unicode del emoticón cohete */
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+    .ir-arriba {
+        font-size: 16px;
     }
 }
-/* Ajustes para secciones en pantallas pequeñas */
-@media (max-width: 768px) {
-    section {
-        padding: 40px 10px; /* Reducir padding interno */
-        margin-top: 80px; /* Menor margen superior */
-    }
-}
+
