@@ -88,7 +88,6 @@ h1.mb-0 {
   }
 }
 
-
 /* Estilos para el menú de navegación */
 header nav {
   margin-top: 10px; /* Margen superior */
@@ -153,7 +152,6 @@ ul.list-inline li a.nav-link:hover {
   }
 }
 
-
 /*----------------------------------------
   Estilos de Secciones Generales
 ----------------------------------------*/
@@ -177,7 +175,8 @@ h2.section-title {
 .education-card {
   border: none;
   padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease;
   height: 53%;
   border-radius: 10px;
 }
@@ -477,3 +476,30 @@ h2.section-title {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
